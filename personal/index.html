@@ -1,0 +1,3123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ismael Novelo 🌟</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"> Ismael Novelo <img src="bug.png" class="logo-png"></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#programs">Projects</a></li>
+        <li><a href="#fun-zone">Code</a></li>
+        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
+        <a href="../School/index1.html" class="folder-link"><label>School Website</label></a>
+        <a href="../bscs/index2.html" class="folder-link"><label>BSCS Website</label></a>
+        <a href="../company/index3.html" class="folder-link"><label>Company Website</label></a>
+      </ul>
+    </nav>
+
+    
+    
+   
+
+    <header id="home" class="hero section">
+      <div class="hero-content hidden">
+        <h1>Welcome to my Website! <img src="hacker.png" class="logo1-png"> </h1>
+        <p>Discover and grow with Me.</p>
+        <a href="#programs">
+        <button class="cta-btn">Join the Fun</button>
+        </a>
+      </div>
+    </header>
+
+    <section id="programs" class="programs section">
+      <h2 class="hidden">The Awesome Projects <img src="web.png" class="logo1-png"></h2>
+    <div class="cards-container">
+      <div class="card hidden card-delay-1">
+  <h3>Addition ➕</h3>
+
+  <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .calculator {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        width: 200px;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <input type="text" id="num1" placeholder="First number" />
+      <input type="text" id="num2" placeholder="Second number" />
+      <button onclick="add()">Add</button>
+      <input type="text" id="result" placeholder="Result" readonly />
+    </div>
+
+    <script>
+      function add() {
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+        document.getElementById("result").value = n1 + n2;
+      }
+    </script>
+  </body>
+</html>
+
+  </textarea>
+</div>
+
+      <div class="card hidden card-delay-2">
+        <h3>Alcohol Verification 🍺</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .alcohol {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "alcohol">
+        <input type=" text" id="age" placeholder="Age">
+        <button onclick="checkAlcohol()">Check Alcohol Eligibility</button>
+    </div>
+    <script>
+        function checkAlcohol() {
+                let age = Number(document.getElementById("age").value);
+                if (age >= 18) {
+                    alert("You are eligible to purchase alcohol.");
+                } else {
+                    alert("You are not eligible to purchase alcohol.");
+                }
+            }
+        
+    </script>
+</body>
+</html>
+
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Calculator 🧮</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Function Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            height: 0%;
+        }
+
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Grid for the operation buttons */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4ECDC4;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #45b7ae;
+        }
+
+        /* Result field styling */
+        #result {
+            background-color: #f8f9fa;
+            border-color: #4ECDC4;
+            color: #2d3436;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="1st number">
+        <input type="number" id="num2" placeholder="2nd number">
+        
+        <div class="buttons-grid">
+            <button onclick="calc('add')">Add +</button>
+            <button onclick="calc('sub')">Sub -</button>
+            <button onclick="calc('mul')">Mul ×</button>
+            <button onclick="calc('div')">Div ÷</button>
+        </div>
+
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+    <script>
+        // One function to rule them all! 
+        function calc(operation) {
+            // Get values and convert to Numbers
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let resField = document.getElementById("result");
+            let result;
+
+            // Logic for different operations
+            if (operation === 'add') {
+                result = n1 + n2;
+            } 
+            else if (operation === 'sub') {
+                result = n1 - n2;
+            } 
+            else if (operation === 'mul') {
+                result = n1 * n2;
+            } 
+            else if (operation === 'div') {
+                if (n2 === 0) {
+                    result = "Error: Div by 0";
+                } else {
+                    result = n1 / n2;
+                }
+            }
+
+            // Display the result
+            resField.value = result;
+        }
+    </script>
+</body>
+</html>
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Hello World 🌍</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertWindow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #070000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .HelloWorld {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = HelloWorld>
+       <button onclick="alert('Hello World 🤗')">Click Me!</button> 
+    </div>
+       
+</body>
+</html>
+
+
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Window 🪟</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Name pop up window 😊</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: black;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name">
+        <input type="text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+
+    <script>
+        function RUN() {
+            let name = document.getElementById("name").value;
+
+            document.body.innerHTML = `
+                <div style="
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    height:100vh;
+                    font-size:40px;
+                    font-family:Arial;
+                ">
+                    Hello, ${name}!
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Birthday 🎂</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .birthday {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "birthday">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="Birthday()">Let see!</button>
+    </div>
+    <script>
+      function Birthday(){
+        let name = document.getElementById("name").value;
+        alert("Happy Birthday " + name + "! Wishing you a wonderful year ahead.");
+      }
+        
+    </script>
+</body>
+</html>
+
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+  <h3>Show current date 📅</h3>
+  <iframe class="preview"></iframe>
+  
+  <textarea class="card-code" style="display:none;">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>If else window 🤗</h3>
+        <iframe class="preview"></iframe>
+        
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ifelse {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "ifelse">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        if(name === "Mael"){
+            alert("Hello Mael👋! Welcome back!");
+        } else {
+            alert("Hello " + name + "! Nice to meet you!");
+        }
+       
+    }
+    </script>
+</body>
+</html>
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Multiplication ✖️</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Hello " + name + "! Nice to meet you!");
+        
+       
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Division ➗</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Subtraction ➖</h3>
+        <iframe class="preview"></iframe>
+        
+        <textarea class="card-code" style="display:none;">
+         
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Timer ⏳</h3>
+        <iframe class="preview"></iframe>
+        <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed JavaScript Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .timer-card {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            color: #2d3436;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #ff7675;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #d63031;
+        }
+
+        button:disabled {
+            background-color: #b2bec3;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timer-card">
+        <input type="text" id="timer-display" readonly value="60">
+        <button id="start-btn" onclick="startTimer()">Start Timer</button>
+    </div>
+
+    <script>
+        var timeLeft = 60;
+        var timerId = null;
+
+        function startTimer() {
+            // 1. Clear any old timer so they don't stack up
+            if (timerId !== null) {
+                clearInterval(timerId);
+            }
+
+            // 2. Reset time if the previous run finished
+            if (timeLeft <= 0) {
+                timeLeft = 60;
+            }
+
+            // 3. Disable the button so the user can't spam it
+            const btn = document.getElementById("start-btn");
+            btn.disabled = true;
+            btn.innerText = "Running...";
+
+            // 4. Start the interval
+            timerId = setInterval(countdown, 1000);
+        }
+
+        function countdown() {
+            const display = document.getElementById("timer-display");
+            const btn = document.getElementById("start-btn");
+
+            if (timeLeft <= 0) {
+                // Stop the timer
+                clearInterval(timerId);
+                timerId = null;
+                
+                // Show 0 on the screen
+                display.value = 0;
+                
+                // Re-enable the button
+                btn.disabled = false;
+                btn.innerText = "Start Timer";
+
+                // Final Alert (Triggered only once!)
+                alert("Time's up! ⏳");
+            } else {
+                display.value = timeLeft;
+                timeLeft--;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>interframe image 🖼️</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class = "img">
+        <button onclick="sad()">Sad face</button>
+        <button onclick="happy()">Happy face</button>
+        <script>
+            function sad() {
+                document.body.style.backgroundImage = "url('sad.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+            function happy() {
+                document.body.style.backgroundImage = "url('happy.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+        </script>  
+     </div>
+</body>
+</html>
+  </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Javascript Calculator 🧮</h3>
+        <iframe class="preview"></iframe>
+        <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+var sec = 60;
+var min = 60;
+var hr = 24;
+
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #00ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        </style>
+
+
+</head>
+<body>
+    <h1>JavaScript Calculations</h1>
+    <script type = "text/javascript">
+        document.write("Seconds in a minute: " + sec + "<br>");
+        document.write("Seconds in an hour: " + sec * min + "<br>");
+        document.write("Seconds in a day: " + sec * min * hr + "<br>");
+    </script>
+</body>
+</html>
+        </textarea>
+</div>
+
+<div class="card hidden card-delay-2">
+        <h3>Name Greeting 👋</h3>
+        <iframe class="preview"></iframe>
+
+  <textarea class="card-code" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Your name is " + name );
+        
+       
+    }
+    </script>
+</body>
+</html>
+
+  </textarea>
+</div>
+
+
+    <section id="fun-zone" class="interactive-select section">
+      <h2 class="hidden">Pick Your Favorite Projects! 💻</h2>
+      <div class="select-container hidden">
+        <select id="subject-select">
+          <option value="Javascript Calculator">Javascript Calculator 🧮</option>
+          <option value="Calculator">Calculator 🧮</option>
+          <option value="Hello World">Hello World 🌍</option>
+          <option value="Window">Window 🪟</option>
+          <option value="Name pop up window">Name pop up window 😊</option>
+          <option value="Birthday">Birthday 🎂</option>
+          <option value="If else window">If else window 🤗</option>
+          <option value="Alcohol Verification">Alcohol Verification 🍺</option>
+          <option value="Show current date">Show current date 📅</option>
+          <option value="Multiplication">Multiplication ✖️</option>
+          <option value="Division">Division ➗</option>
+          <option value="Addition">Addition ➕</option>
+          <option value="Subtraction">Subtraction ➖</option>
+          <option value="Timer">Timer ⏳</option>
+          <option value="interframe image">interframe image 🖼️</option>
+          <option value="Name Greeting">Name Greeting 👋</option>
+        </select>
+        <div id="subject-result" class="result-box"></div>
+      </div>
+    </section>
+
+    <textarea id="code-Javascript-Calculator" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+var sec = 60;
+var min = 60;
+var hr = 24;
+
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #00ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        </style>
+
+
+</head>
+<body>
+    <h1>JavaScript Calculations</h1>
+    <script type = "text/javascript">
+        document.write("Seconds in a minute: " + sec + "<br>");
+        document.write("Seconds in an hour: " + sec * min + "<br>");
+        document.write("Seconds in a day: " + sec * min * hr + "<br>");
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Calculator" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Function Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            height: 0%;
+        }
+
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Grid for the operation buttons */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4ECDC4;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #45b7ae;
+        }
+
+        /* Result field styling */
+        #result {
+            background-color: #f8f9fa;
+            border-color: #4ECDC4;
+            color: #2d3436;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="1st number">
+        <input type="number" id="num2" placeholder="2nd number">
+        
+        <div class="buttons-grid">
+            <button onclick="calc('add')">Add +</button>
+            <button onclick="calc('sub')">Sub -</button>
+            <button onclick="calc('mul')">Mul ×</button>
+            <button onclick="calc('div')">Div ÷</button>
+        </div>
+
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+    <script>
+        // One function to rule them all! 
+        function calc(operation) {
+            // Get values and convert to Numbers
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let resField = document.getElementById("result");
+            let result;
+
+            // Logic for different operations
+            if (operation === 'add') {
+                result = n1 + n2;
+            } 
+            else if (operation === 'sub') {
+                result = n1 - n2;
+            } 
+            else if (operation === 'mul') {
+                result = n1 * n2;
+            } 
+            else if (operation === 'div') {
+                if (n2 === 0) {
+                    result = "Error: Div by 0";
+                } else {
+                    result = n1 / n2;
+                }
+            }
+
+            // Display the result
+            resField.value = result;
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Hello-World" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertWindow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #070000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .HelloWorld {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = HelloWorld>
+       <button onclick="alert('Hello World 🤗')">Click Me!</button> 
+    </div>
+       
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Window" style="display:none;">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+</textarea>
+
+<textarea id="code-Name-pop-up-window" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: black;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name">
+        <input type="text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+
+    <script>
+        function RUN() {
+            let name = document.getElementById("name").value;
+
+            document.body.innerHTML = `
+                <div style="
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    height:100vh;
+                    font-size:40px;
+                    font-family:Arial;
+                ">
+                    Hello, ${name}!
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
+
+</textarea>
+
+<textarea id="code-Birthday" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .birthday {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "birthday">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="Birthday()">Let see!</button>
+    </div>
+    <script>
+      function Birthday(){
+        let name = document.getElementById("name").value;
+        alert("Happy Birthday " + name + "! Wishing you a wonderful year ahead.");
+      }
+        
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-If-else-window" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ifelse {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "ifelse">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        if(name === "Mael"){
+            alert("Hello Mael👋! Welcome back!");
+        } else {
+            alert("Hello " + name + "! Nice to meet you!");
+        }
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Alcohol-Verification" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .alcohol {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "alcohol">
+        <input type=" text" id="age" placeholder="Age">
+        <button onclick="checkAlcohol()">Check Alcohol Eligibility</button>
+    </div>
+    <script>
+        function checkAlcohol() {
+                let age = Number(document.getElementById("age").value);
+                if (age >= 18) {
+                    alert("You are eligible to purchase alcohol.");
+                } else {
+                    alert("You are not eligible to purchase alcohol.");
+                }
+            }
+        
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Show-current-date" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Multiplication" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Hello " + name + "! Nice to meet you!");
+        
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Division" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Addition" style="display:none;">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .calculator {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        width: 200px;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <input type="text" id="num1" placeholder="First number" />
+      <input type="text" id="num2" placeholder="Second number" />
+      <button onclick="add()">Add</button>
+      <input type="text" id="result" placeholder="Result" readonly />
+    </div>
+
+    <script>
+      function add() {
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+        document.getElementById("result").value = n1 + n2;
+      }
+    </script>
+  </body>
+</html>
+</textarea>
+
+<textarea id="code-Subtraction" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+</textarea>
+
+<textarea id="code-Timer" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .timer {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class = "timer">
+        <input type="text" id="timer" readonly value="">
+        <button onclick="startTimer()">Start Timer</button>
+    </div>
+    <script>
+        var timeLeft = 60;
+        var timerId;
+
+        function startTimer() {
+            timerId = setInterval(countdown, 1000);
+        }
+
+        function countdown() {
+            if (timeLeft == 0) {
+                clearInterval(timerId);
+                alert("Time's up!");
+            } else {
+                document.getElementById("timer").value = timeLeft;
+                timeLeft--;
+            }
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-interframe-image" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class = "img">
+        <button onclick="sad()">Sad face</button>
+        <button onclick="happy()">Happy face</button>
+        <script>
+            function sad() {
+                document.body.style.backgroundImage = "url('sad.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+            function happy() {
+                document.body.style.backgroundImage = "url('happy.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+        </script>  
+     </div>
+</body>
+</html>
+  </textarea>
+</div>
+
+
+
+<textarea id="code-Name-Greeting" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Your name is " + name );
+        
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Calculator" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Function Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            height: 0%;
+        }
+
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Grid for the operation buttons */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4ECDC4;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #45b7ae;
+        }
+
+        /* Result field styling */
+        #result {
+            background-color: #f8f9fa;
+            border-color: #4ECDC4;
+            color: #2d3436;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="1st number">
+        <input type="number" id="num2" placeholder="2nd number">
+        
+        <div class="buttons-grid">
+            <button onclick="calc('add')">Add +</button>
+            <button onclick="calc('sub')">Sub -</button>
+            <button onclick="calc('mul')">Mul ×</button>
+            <button onclick="calc('div')">Div ÷</button>
+        </div>
+
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+    <script>
+        // One function to rule them all! 
+        function calc(operation) {
+            // Get values and convert to Numbers
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let resField = document.getElementById("result");
+            let result;
+
+            // Logic for different operations
+            if (operation === 'add') {
+                result = n1 + n2;
+            } 
+            else if (operation === 'sub') {
+                result = n1 - n2;
+            } 
+            else if (operation === 'mul') {
+                result = n1 * n2;
+            } 
+            else if (operation === 'div') {
+                if (n2 === 0) {
+                    result = "Error: Div by 0";
+                } else {
+                    result = n1 / n2;
+                }
+            }
+
+            // Display the result
+            resField.value = result;
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Hello-World" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertWindow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #070000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .HelloWorld {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = HelloWorld>
+       <button onclick="alert('Hello World 🤗')">Click Me!</button> 
+    </div>
+       
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Window" style="display:none;">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+</textarea>
+
+<textarea id="code-Name-pop-up-window" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: black;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name">
+        <input type="text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+
+    <script>
+        function RUN() {
+            let name = document.getElementById("name").value;
+
+            document.body.innerHTML = `
+                <div style="
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    height:100vh;
+                    font-size:40px;
+                    font-family:Arial;
+                ">
+                    Hello, ${name}!
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
+
+</textarea>
+
+<textarea id="code-Birthday" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .birthday {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "birthday">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="Birthday()">Let see!</button>
+    </div>
+    <script>
+      function Birthday(){
+        let name = document.getElementById("name").value;
+        alert("Happy Birthday " + name + "! Wishing you a wonderful year ahead.");
+      }
+        
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-If-else-window" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ifelse {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "ifelse">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        if(name === "Mael"){
+            alert("Hello Mael👋! Welcome back!");
+        } else {
+            alert("Hello " + name + "! Nice to meet you!");
+        }
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Alcohol-Verification" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .alcohol {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "alcohol">
+        <input type=" text" id="age" placeholder="Age">
+        <button onclick="checkAlcohol()">Check Alcohol Eligibility</button>
+    </div>
+    <script>
+        function checkAlcohol() {
+                let age = Number(document.getElementById("age").value);
+                if (age >= 18) {
+                    alert("You are eligible to purchase alcohol.");
+                } else {
+                    alert("You are not eligible to purchase alcohol.");
+                }
+            }
+        
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Show-current-date" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Multiplication" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Hello " + name + "! Nice to meet you!");
+        
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Division" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .currentdate {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="currentdate">
+        <button onclick="showDate()">Show Current Date</button>
+    </div>
+    <script>
+        function showDate() {
+            let currentDate = new Date();
+            alert("Today is: " + currentDate.toDateString());
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-Addition" style="display:none;">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .calculator {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        width: 200px;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <input type="text" id="num1" placeholder="First number" />
+      <input type="text" id="num2" placeholder="Second number" />
+      <button onclick="add()">Add</button>
+      <input type="text" id="result" placeholder="Result" readonly />
+    </div>
+
+    <script>
+      function add() {
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+        document.getElementById("result").value = n1 + n2;
+      }
+    </script>
+  </body>
+</html>
+</textarea>
+
+<textarea id="code-Subtraction" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .calculator {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+
+        input {
+            width: 200px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="First number">
+        <input type="text" id="num2" placeholder="Second number">
+        <button onclick="sub()">Sub</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+
+    <script
+>
+     function sub() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").value = n1 - n2;
+        }
+</script>
+</body>
+
+
+</html>
+</textarea>
+
+<textarea id="code-Timer" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .timer {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class = "timer">
+        <input type="text" id="timer" readonly value="">
+        <button onclick="startTimer()">Start Timer</button>
+    </div>
+    <script>
+        var timeLeft = 60;
+        var timerId;
+
+        function startTimer() {
+            timerId = setInterval(countdown, 1000);
+        }
+
+        function countdown() {
+            if (timeLeft == 0) {
+                clearInterval(timerId);
+                alert("Time's up!");
+            } else {
+                document.getElementById("timer").value = timeLeft;
+                timeLeft--;
+            }
+        }
+    </script>
+</body>
+</html>
+</textarea>
+
+<textarea id="code-interframe-image" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class = "img">
+        <button onclick="sad()">Sad face</button>
+        <button onclick="happy()">Happy face</button>
+        <script>
+            function sad() {
+                document.body.style.backgroundImage = "url('sad.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+            function happy() {
+                document.body.style.backgroundImage = "url('happy.png')";
+                document.body.style.backgroundSize = "cover";
+            }
+        </script>  
+     </div>
+</body>
+</html>
+  </textarea>
+
+
+
+
+<textarea id="code-Name-Greeting" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .name {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class = "name">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
+    </div>
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        
+            alert("Your name is " + name );
+        
+       
+    }
+    </script>
+</body>
+</html>
+</textarea>
+
+<div class="cards-container">
+
+  <!-- Resume as an Image -->
+   <section id="Resume" class="resume-card">
+  
+    <img src="resume.jpg" class="resume-img-preview" alt="Resume Preview">
+    <h3>My Resume</h3>
+    <p>Gameplay Programmer</p>
+  
+</section>
+
+  <!-- Photos Gallery -->
+   <section id="Gallery" class="photos-card">
+    
+  
+    <div class="photo-grid">
+      <img src="family1.jpg" alt="Game Screenshot 1">
+      <img src="family2.jpg" alt="Game Screenshot 2">
+      <img src="family3.jpg" alt="Game Screenshot 3">
+      <img src="family4.jpg" alt="Game Screenshot 4">
+      <img src="friends1.jpg" alt="Game Screenshot 1">
+      <img src="friends2.jpg" alt="Game Screenshot 2">
+      <img src="friends3.jpg" alt="Game Screenshot 3">
+      <img src="friends4.jpg" alt="Game Screenshot 4">
+    </div>
+    <h3>Gallery</h3>
+    <p>Family & Friends</p>
+  
+
+</div>
+    </section>
+
+      
+    <script src="script.js"></script>
+    <script>
+document.querySelectorAll('.card').forEach(card => {
+    const iframe = card.querySelector('.preview');
+    const code = card.querySelector('.card-code').textContent;
+
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.open();
+    iframeDoc.write(code);
+    iframeDoc.close();
+});
+</script>
+  </body>
+</html>

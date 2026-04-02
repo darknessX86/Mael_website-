@@ -1,0 +1,474 @@
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-clip: text;          /* standard property for Firefox */
+    -webkit-background-clip: text;  /* WebKit browsers: Chrome, Safari, Edge */
+    color: transparent;              /* shows the gradient */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b84cff;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("HomeBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   SECTIONS - HERO-LIKE BACKGROUND
+   ========================= */
+.section {
+    min-height: 100vh;
+    padding: 120px 50px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* changed from fixed */
+    position: relative;
+}
+
+/* Overlay gradient for all sections */
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); /* match hero overlay intensity */
+    z-index: 0;
+}
+
+/* Individual section backgrounds (all same style as hero) */
+#about {
+    background: linear-gradient(135deg, #ff0000 0%, #006eff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#curriculum {
+    background: linear-gradient(135deg, #ff0000 0%, #006eff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#faculty {
+    background: linear-gradient(135deg, #ff0000 0%, #006eff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#events {
+    background: linear-gradient(135deg, #ff0000 0%, #006eff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#contact {
+    background: linear-gradient(135deg, #ff0000 0%, #006eff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Ensure content sits above overlay */
+.section * {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   ABOUT SECTION
+   ========================= */
+#about h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #b84cff;
+}
+
+#about p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#about ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   FACULTY GRID
+   ========================= */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.faculty-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-style:solid;
+    border: 3px solid rgba(184,76,255,0.4);
+}
+.faculty-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.faculty-card h2 {
+    margin-bottom: 10px;
+    color: #b84cff;
+}
+
+/* =========================
+   EVENTS GRID (LIKE FACULTY)
+   ========================= */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* Event Card (same style feel as faculty) */
+#events .card {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 3px solid rgba(184,76,255,0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#events .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* FIXED IMAGE SIZE */
+#events .card img {
+    width: 100%;
+    height: 180px;        /* fixed height */
+    object-fit: cover;    /* no stretching */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* =========================
+   ABOUT GRID (LIKE FACULTY & EVENTS)
+   ========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* =========================
+   ABOUT GRID (LIKE EVENTS)
+   ========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* About Cards */
+/* =========================
+   ABOUT GRID (LIKE FACULTY)
+   ========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* About Cards */
+/* =========================
+   ABOUT GRID (NO SAME HEIGHT)
+   ========================= */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+/* Each card */
+.about-grid .Event-card {
+    width: 48%; /* 2 per row */
+    min-width: 300px;
+    
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(243, 242, 242, 0.116);
+    border: 3px solid rgba(184,76,255,0.4);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.about-grid .Event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Text styling */
+.about-grid h3 {
+    margin-bottom: 10px;
+    color: #b84cff;
+}
+
+.about-grid p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GRADIENT TEXT
+   ========================= */
+.section h1 {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* =========================
+   BACK TO TOP BUTTON
+   ========================= */
+#backToTop {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* =========================
+   CURRICULUM SECTION
+   ========================= */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 60px auto 0;
+}
+
+.year-card {
+    position: relative;
+    padding: 40px 30px 30px;
+    border-radius: 18px;
+    background: rgba(243, 242, 242, 0.116);
+    border: 3px solid rgba(184,76,255,0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.year-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
+
+.year-title {
+    position: absolute;
+    top: -16px;              /* pushes label through the border */
+    left: 30px;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 14px;
+
+    /* RED → BLUE gradient text */
+    background: linear-gradient(to right, #ff2a2a, #3333ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: wheat;
+
+    /* Mask the border behind the text */
+    background-color: #111;
+    z-index: 2;
+}
+
+/* Add this to hide the border line behind the label */
+.year-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 6px 16px;
+    background: #111;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* =========================
+   CURRICULUM TABLE STYLE
+   ========================= */
+.course-table {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.course-header,
+.course-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 60px;
+    padding: 8px 0;
+    align-items: center;
+}
+
+.course-header {
+    font-weight: bold;
+    color: #ff66ff;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    margin-bottom: 6px;
+}
+
+.course-row {
+    border-bottom: 1px dashed rgba(255,255,255,0.15);
+}
+
+.course-row span:last-child {
+    text-align: right;
+}
+
+/* ✅ IMAGE FIX (IMPORTANT) */
+.card img {
+    width: 100%;
+    max-width: 400px; /* prevents it from getting too wide */
+    height: auto;     /* keeps original aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+}
+

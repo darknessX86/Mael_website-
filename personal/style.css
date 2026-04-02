@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+/* Make sure the container allows absolute positioning inside it */
+#code-to-copy {
+    /* Change this number to make it smaller (try 0.8rem or 12px) */
+    font-size: 0.85rem; 
+    
+    display: block;
+    white-space: pre;
+    font-family: 'Courier New', monospace;
+    line-height: 1.4; /* Optional: adds a little space between lines */
+}
+
+:root {
+    --primary: #FF6B6B;     /* Fun Red/Pink */
+    --secondary: #4ECDC4;   /* Bright Teal */
+    --accent: #FFE66D;      /* Cheerful Yellow */
+    --text: #2D3436;
+    --bg: #e4eaf5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Fun underline hover effect for links */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -8px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: width 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: var(--secondary); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at top left, rgba(72, 235, 224, 0.1), transparent),
+                radial-gradient(circle at bottom right, rgba(255,107,107,0.1), transparent);
+    padding: 0 5%;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 0px var(--accent); /* Playful drop shadow */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Bouncy Button */
+.cta-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy math */
+}
+
+.cta-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 20px rgba(255, 107, 107, 0.4);
+    background-color: #ff5252;
+}
+
+/* Programs Section (Hover Cards) */
+.programs {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.programs h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: var(--secondary);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 25px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    /* The magic cubic-bezier makes it bounce when hovered */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-top: 8px solid var(--accent);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-20px) rotate(2deg); /* Lifts up and tilts slightly */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-top-color: var(--primary);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+/* Interactive Select Section */
+.interactive-select {
+    padding: 6rem 5%;
+    text-align: center;
+    background-color: #e8f8f5;
+    min-height: 50vh;
+    width: 100%;
+}
+
+.interactive-select h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+select {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: 3px solid var(--secondary);
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    font-weight: 900;
+    color: var(--text);
+    transition: all 0.3s ease;
+    appearance: none; /* removes default browser styling */
+    text-align: center;
+}
+
+select:focus, select:hover {
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+    transform: scale(1.02);
+}
+
+.result-box {
+    margin-top: 3rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    
+    /* Starts hidden and tiny */
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Class added by JS to trigger the pop-in animation */
+.result-box.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* SCROLL ANIMATION CLASSES (Triggered by JS) */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggers the animation for the cards */
+.card-delay-1 { transition-delay: 0.1s; }
+.card-delay-2 { transition-delay: 0.3s; }
+.card-delay-3 { transition-delay: 0.5s; }
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--text);
+    color: white;
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    background-image: url('your-background-image.png'); 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    image-rendering: pixelated;
+}
+
+.card-icon {
+    /* Customize Size Here */
+    width: 120px;   /* Change this to make it bigger or smaller */
+    height: auto;   /* Keeps the aspect ratio perfect */
+    
+    margin-bottom: 1.5rem; /* Space between image and text */
+    
+    /* Makes the pixel art crisp */
+    image-rendering: pixelated; 
+    
+    /* Optional: subtle float animation for the icon */
+    transition: transform 0.3s ease;
+}
+
+/* Make the icon pop more when the card is hovered */
+.card:hover .card-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.logo-png {
+  width: 20px;      /* adjust size */
+  height: 20px;
+  vertical-align: middle;
+}
+
+.logo1-png {
+  width: 80px;      /* adjust size */
+  height: 80px;
+  vertical-align: middle;
+}
+
+.preview {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(0, 247, 255);
+}
+
+
+
+
+
+
+/* --- RESUME IMAGE CARD --- */
+.resume-card {
+    background: white;
+    padding: 2rem;           /* Increased padding for a premium look */
+    border-radius: 30px;     /* Rounder corners for a larger card */
+    width: 1500px;            /* <--- CHANGE THIS (was 320px) to make it much wider */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-top: 10px solid var(--accent);
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    margin: 20px auto;       /* Centers the big card on your page */
+}
+
+/* Makes the resume image look like a large, clear document */
+.resume-img-preview {
+    width: 100%;             /* Fills the 600px width of the card */
+    height: 1300px;           /* <--- CHANGE THIS (was 350px) to show most of the page */
+    object-fit: contain;     /* <--- CHANGED to 'contain' so the whole image fits without cropping */
+    background: #f9f9f9;     /* Light grey background if image is smaller than container */
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+/* Titles for the big card */
+.resume-card h3 {
+    font-size: 2.2rem;       /* Bigger text for a bigger card */
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- PHOTOS/GALLERY CARD --- */
+.photos-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 25px;
+    width: 1000px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-top: 8px solid var(--accent);
+    cursor: pointer;
+    text-align: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+/* --- SHARED HOVER EFFECTS --- */
+.resume-card:hover, .photos-card:hover {
+    
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-top-color: var(--primary);
+}
+
+/* Subtle zoom on the resume photo when hovering the card */
+.resume-card:hover .resume-img-preview {
+    transform: scale(1.05);
+}
+.photos-card:hover {
+    transform: scale(1.05);
+}

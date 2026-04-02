@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>University Website</title>
+
+<style>
+/* =========================
+   GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1f22, #2b2d31, #202225);
+  color: #ffffff;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 90px;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Optional: prevents the sidebar from shrinking on small screens */
+  min-height: 100vh; 
+}
+
+.University-Logo {
+  /* Use percentage so it scales with the sidebar width */
+  width: 100%; 
+  
+  /* CRITICAL: Changed from 10px to auto to fix the 'squashed' look */
+  height: auto; 
+  
+  object-fit: contain;
+  margin-bottom: 20px;
+  align-items: center;
+  
+  /* Centers the logo if the sidebar uses flex */
+  display: block; 
+}
+
+.sidebar h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar ul li a {
+  width: 75px;
+  height: 55px;
+  background: #313338;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  color: #87CEEB;
+}
+
+.sidebar ul li a:hover {
+  background: linear-gradient(135deg, #1d29af, #9b59b6);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 15px #be51f9;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 60px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  position: relative;
+  height: 350px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg, #5865f2, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.overlay p {
+  font-size: 18px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(88,101,242,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* =========================
+   EVENTS
+========================= */
+#events .cards {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.glow-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #374be0, #9b59b6);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px #272e79;
+  transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h3><img src="UM LOGO.png" class="University-Logo"></h3>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="../personal/index.html" class="parent-link"><label>Ismael<br>Novelo</label></a></li>
+    <li><a href="../bscs/index2.html" class="folder-link"><label>BSCS<br>Website</label></a></li>
+    <li><a href="../company/index3.html" class="folder-link"><label>Company<br>Website</label></a></li>
+    
+  </ul>
+</aside>
+
+<!-- CONTENT -->
+<main class="content">
+
+<!-- HOME -->
+<section id="home" class="section hero">
+  <img src="background.jpg">
+  <div class="overlay">
+    <h1>Welcome to Our University</h1>
+    <p>Shaping minds. Building futures.</p>
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About Us</h2>
+  <div class="cards">
+    <div class="card"><h3>History</h3><p>Established as instituto
+      de manila by a group of filipino educators, 5 october 1913.
+      converted into a university, 3
+      november 1921. apolinario g. de
+      los santos, first president.
+      opened first school of foreign
+      service, 3 may 1946. building
+      was occupied by the japanese
+      forces during their occupation
+      of manila. used temporarily
+      as city hall and senate session hall in 1945. mariand v.
+      de los santos, president
+      since 1927.</p></div>
+<div class="card"><h3>Mission</h3><p>ACE - to Accomplish something with complete success.<p> A - Anchor in the hearts of the youth the love of country, science, and virtue.</p>       <p> C - Create an atmosphere of academic excellence       and competence.</p>       <p style="margin-bottom: 20px;"> E - Empower the youth with modern scientific       technological skills in braving the challenges       of the global society.</p></div>
+<div class="card"><h3>Vision</h3><p>To impart to the future generations the university of manila trilogy of ideals: love of country, love of science and love of virtue, in making the lives of others better, brighter, lighter and more liveable by making quality education accessible to all.</p></div>
+<div class="card"><h3>Motto</h3><p>To acquire knowledge and skills for the benefit of mankind</p></div>
+<div class="card"><h3>Address</h3><p>546 Dr. Mariano V. de losSantos street , Manila, Philippines, 2806</p></div>
+<div class="card"><h3>Contact</h3><p>Email: umnla.edu.ph@gmail.com<br>Telephone: 8735-5085</p></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+console.log("Fancy Website Loaded 🚀");
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

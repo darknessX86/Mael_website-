@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fdf6ef;
+  color: #63280b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1f3d34;
+}
+
+.phone {
+  border: 1px solid #1f3d34;
+  background: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.img-box {
+  width: 140px;
+  height: 180px;
+  background: black url("image.jpg") center/cover no-repeat;
+  border-radius: 14px;
+}
+
+.img-box.small {
+  width: 100px;
+  height: 100px;
+}
+
+.menu {
+  padding: 60px;
+}
+
+.menu h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.menu-item span {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.cta {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  background: #1f7a64;
+  color: white;
+  cursor: pointer;
+}
+
+.culture {
+  padding: 60px;
+  text-align: center;
+}
+
+.testimonial {
+  background: linear-gradient(to right, #f2a93b, #f7c15f);
+  padding: 60px;
+  text-align: center;
+  color: #1f3d34;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+/* ===== Scroll Animation ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Image Hover ===== */
+.img-box {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== Menu Item Hover ===== */
+.menu-item {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(0,0,0,0.05);
+  transform: translateX(6px);
+}
+
+/* ===== Button Hover ===== */
+.cta {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background: #145c4a;
+  transform: scale(1.05);
+}
+/* Dark toggle button base styling */
+.dark-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Styles applied when the 'dark' class is on the body */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.dark .navbar,
+.dark .menu,
+.dark .culture {
+  background: #020617;
+}
+
+.dark a {
+  color: #e5e7eb;
+}
+
+.dark .menu-item {
+  border-color: #334155;
+}
+
+.dark .testimonial {
+  background: linear-gradient(to right, #1e293b, #020617);
+  color: #e5e7eb;
+}
+
+.dark .img-box {
+  box-shadow: none;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 50px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid rgba(146, 66, 1, 0.54);
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== NEON MODE SUPPORT ===== */
+.dark .about-card {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0,247,255,0.2);
+}
+
+.dark .about-card h3 {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+/* ===== FORCE WHITE NAV TEXT IN DARK MODE ===== */
+.dark .navbar nav a {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+.dark .navbar nav a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #ffffff,
+    0 0 20px var(--neon-blue);
+}
+
+/* Active link (clicked) */
+.dark .navbar nav a.active {
+  color: #ffffff;
+  text-shadow:
+    0 0 12px #ffffff,
+    0 0 25px var(--neon-pink);
+}
+.menu .menu-item {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.menu-item {
+  margin-bottom: 20px;
+}
+/* ===== MENU BACKGROUND IMAGE SLOT ===== */
+.menu {
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(253, 246, 239, 0.255),
+      rgba(253, 246, 239, 0.823)
+    ),
+    url("background1.webp") center / cover no-repeat;
+}
+.dark .menu {
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.85)
+    ),
+    url("background2.webp") center / cover no-repeat;
+}
+.img-box {
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ===== DESSERT SECTION ===== */
+
+.dessert {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.dessert h2 {
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.dessert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.dessert-card {
+  background: rgba(0,0,0,0.03);
+  padding: 20px;
+  border-radius: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dessert-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* Image */
+.dessert-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.dessert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Image zoom on hover */
+.dessert-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Text */
+.dessert-card h4 {
+  margin-top: 10px;
+}
+
+.dessert-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ===== NEON DARK MODE ===== */
+.dark .dessert-card {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255,43,220,0.25);
+}
+
+.dark .dessert-card h4 {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
+}
+
+.dark .dessert-card p {
+  color: #e5e7eb;
+}
+/* Breakfast background */
+.menu.breakfast {
+  background:
+    linear-gradient(
+      rgba(253, 246, 239, 0.25),
+      rgba(253, 246, 239, 0.82)
+    ),
+    url("background1.webp") center / cover no-repeat;
+}
+
+/* Lunch background */
+.menu.lunch {
+  background:
+    linear-gradient(
+      rgba(253, 246, 239, 0.25),
+      rgba(253, 246, 239, 0.82)
+    ),
+    url("background3.jpg") center / cover no-repeat;
+}
+
+/* Dinner background */
+.menu.dinner {
+  background:
+    linear-gradient(
+      rgba(253, 246, 239, 0.25),
+      rgba(253, 246, 239, 0.82)
+    ),
+    url("background5.webp") center / cover no-repeat;
+} 
+.dark .menu.breakfast {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("background2.webp") center / cover no-repeat;
+}
+
+.dark .menu.lunch {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("background4.jpeg") center / cover no-repeat;
+}
+
+.dark .menu.dinner {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("background6.webp") center / cover no-repeat;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.menu-item .img-box.small {
+  flex-shrink: 0;   /* ⬅️ IMPORTANT: prevents shrinking/pushing */
+}
+.menu-item > div {
+  flex: 1;          /* text takes remaining space */
+}
+.menu-item span {
+  white-space: nowrap;
+}
