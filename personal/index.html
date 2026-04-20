@@ -694,60 +694,63 @@
         <iframe class="preview"></iframe>
 
   <textarea class="card-code" style="display:none;">
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-        .name {
-            background: white;
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+      .calculator {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        input {
-            width: 95%;
-            padding: 8px;
-            margin: 5px 0;
-            font-size: 16px;
-        }
+      input {
+        width: 200px;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
 
-        button {
-            width: 100%;
-            padding: 8px;
-            margin-top: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
-    <div class = "name">
-        <input type=" text" id="name" placeholder="Name">
-        <button onclick="RUN()">RUN</button>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <input type="text" id="num1" placeholder="First number" />
+      <input type="text" id="num2" placeholder="Second number" />
+      <button onclick="add()">Mul</button>
+      <input type="text" id="result" placeholder="Result" readonly />
     </div>
+
     <script>
-      function RUN(){
-        let name = document.getElementById("name").value;
-        
-            alert("Hello " + name + "! Nice to meet you!");
-        
-       
-    }
+      function add() {
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+        document.getElementById("result").value = n1 * n2;
+      }
     </script>
-</body>
+  </body>
 </html>
 
 
