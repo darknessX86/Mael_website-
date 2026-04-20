@@ -362,35 +362,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-
+    <title>Document</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #000000;
+            background: #f2f2f2;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-
-        .calculator {
+        .ifelse {
             background: white;
             padding: 50px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-
         input {
-            width: 200px;
+            width: 95%;
             padding: 8px;
             margin: 5px 0;
             font-size: 16px;
         }
-
 
         button {
             width: 100%;
@@ -401,30 +396,23 @@
         }
     </style>
 </head>
-
-
 <body>
-
-
-    <div class="calculator">
-        <input type="text" id="num1" placeholder="First number">
-        <input type="text" id="num2" placeholder="Second number">
-        <button onclick="sub()">Sub</button>
-        <input type="text" id="result" placeholder="Result" readonly>
+    <div class = "ifelse">
+        <input type=" text" id="name" placeholder="Name">
+        <button onclick="RUN()">RUN</button>
     </div>
-
-
-    <script
->
-     function sub() {
-            let n1 = Number(document.getElementById("num1").value);
-            let n2 = Number(document.getElementById("num2").value);
-            document.getElementById("result").value = n1 - n2;
+    <script>
+      function RUN(){
+        let name = document.getElementById("name").value;
+        if(name === "Mael"){
+            alert("Hello Mael👋!");
+        } else {
+            alert("Hello " + name + "! Nice to meet you!");
         }
-</script>
+       
+    }
+    </script>
 </body>
-
-
 </html>
 
   </textarea>
